@@ -1,0 +1,43 @@
+FAQ [FREQUENTLY ASKED QUESTIONS]
+Read this before you ask questions that you believe have already been asked before.
+
+Q) how do i use
+A) watch this video just download the version from <#960695981983301822> instead (its not on github)
+https://www.youtube.com/watch?v=N8pyStNyhxU
+
+Q) I got banned from I-Ready with the OLD 1.18 extension, it says that I had a terms of use violation, what do I do!?!?!
+A) It's an april fools joke. Disable the extension and it should be fine.
+
+Q) chrome extension has "error"
+A) jiut ignroe it its some dumb chrome manifest thing
+
+Q) the lesson doesnt skip
+A) doesnt work for that one then dont know what to tell you
+
+Q) I failed the quiz, why? I got it correct.
+A) dont use it with quizzes it has like a 99% of failing you anyways
+
+Q) It says "Hmm seems like that didnt work blah blah blah" what do I do?
+A) refresh page
+
+Q) I'm stuck on infinite loading what do I do?
+A) open console and while ur on infinite loading screen paste code below, then reload
+
+```var csid = html5Iframe.src.split("?csid=")[1].split("&type")[0];
+fetch(`https://login.i-ready.com/student/v2/web/lesson_component/${csid}/markprogress/${csid}`, {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "sec-gpc": "1",
+  },
+  "referrer": "https://login.i-ready.com/student/dashboard/home",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": `{\"value\":\"a",\"bucket\":\"short_term_unsecured\",\"datatype\":\"json\"}`,
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});```
